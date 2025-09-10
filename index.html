@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣一日遊行程票選</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-6 sm:p-10 mb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold text-center text-teal-600 mb-2">台灣一日遊行程票選</h1>
+        <p class="text-center text-gray-500 mb-8">為下一次的團體旅行，從以下精彩行程中投下您寶貴的一票！</p>
+
+        <!-- 選單區塊 -->
+        <nav class="mb-8 p-4 bg-teal-50 rounded-xl shadow-inner">
+            <h3 class="text-lg font-semibold text-teal-800 mb-2">快速導覽</h3>
+            <ul class="flex flex-wrap justify-center sm:justify-between gap-3 text-sm font-medium">
+                <li><a href="#taipei" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">北台灣</a></li>
+                <li><a href="#miaoli" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">苗栗</a></li>
+                <li><a href="#lalashan" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">拉拉山</a></li>
+                <li><a href="#guishan" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">龜山島</a></li>
+                <li><a href="#taipingshan" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">太平山</a></li>
+                <li><a href="#qingshui" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">清水地熱</a></li>
+            </ul>
+        </nav>
+
+        <div class="space-y-8">
+            <!-- 北台灣行程 -->
+            <div id="taipei" class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-2xl shadow-md p-6 border border-cyan-200">
+                <h2 class="text-2xl font-bold text-cyan-800 mb-4">北台灣：經典地標巡禮</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    **07:00 台北車站出發。**
+                    一次走訪北海岸三大經典景點！在**野柳**欣賞鬼斧神工的女王頭地景；在**九份**老街漫步，感受懷舊山城氛圍，品嚐芋圓、草仔粿等特色美食；最後到**十分**，在鐵道上施放天燈，將願望寫上天空，是個結合自然、人文與浪漫的豐富旅程。**預計18:00返回台北車站。**
+                </p>
+                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
+                    <span class="bg-gray-200 rounded-full px-3 py-1">適合包車</span>
+                    <span class="bg-gray-200 rounded-full px-3 py-1">首次訪台</span>
+                    <span class="bg-gray-200 rounded-full px-3 py-1">多元體驗</span>
+                </div>
+            </div>
+
+            <!-- 苗栗行程 -->
+            <div id="miaoli" class="bg-gradient-to-br from-lime-50 to-lime-100 rounded-2xl shadow-md p-6 border border-lime-200">
+                <h2 class="text-2xl font-bold text-lime-800 mb-4">苗栗：悠閒客家美食之旅</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    **07:00 台北車站出發。**
+                    遠離城市喧囂，享受苗栗的慢活步調。行程將以三義地區為主，探訪舊山線鐵道勝興車站，並品嚐道地的客家菜、漫步在悠靜的鄉村小路，讓身心靈都能得到徹底的放鬆。**預計18:00返回台北車站。**
+                </p>
+                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
+                    <span class="bg-gray-200 rounded-full px-3 py-1">美食主義者</span>
+                    <span class="bg-gray-200 rounded-full px-3 py-1">深度慢活</span>
+                </div>
+            </div>
+
+            <!-- 拉拉山行程 -->
+            <div id="lalashan" class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl shadow-md p-6 border border-amber-200">
+                <h2 class="text-2xl font-bold text-amber-800 mb-4">拉拉山：原始森林與高山果物之旅</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    **07:00 台北車站出發。**
+                    沉浸在拉拉山的原始巨木林中，欣賞千年神木群的壯觀。在山林步道中健行，吸收滿滿的芬多精，並在回程路上品嚐當季盛產的高山水果，是個充滿大自然能量的健康之旅。**預計18:00返回台北車站。**
+                </p>
+                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
+                    <span class="bg-gray-200 rounded-full px-3 py-1">熱愛健行者</span>
+                    <span class="bg-gray-200 rounded-full px-3 py-1">親近自然</span>
+                </div>
+            </div>
+
+            <!-- 龜山島行程 -->
+            <div id="guishan" class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-md p-6 border border-blue-200">
+                <h2 class="text-2xl font-bold text-blue-800 mb-4">龜山島：登島探秘與海上巡禮</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    **07:00 台北車站出發。**
+                    從烏石港出海，繞行龜山島欣賞獨特的「龜山八景」，若幸運的話還能近距離看到成群的鯨豚。結束海上行程後，可到**頭城老街**感受宜蘭文化，品嚐在地美食。是個結合海上探險與陸地文化的豐富行程。**預計18:00返回台北車站。**
+                </p>
+                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
+                    <span class="bg-gray-200 rounded-full px-3 py-1">海上生態愛好者</span>
+                    <span class="bg-gray-200 rounded-full px-3 py-1">特殊地景愛好者</span>
+                </div>
+            </div>
+
+            <!-- 太平山行程 -->
+            <div id="taipingshan" class="bg-gradient-to-br from-violet-50 to-violet-100 rounded-2xl shadow-md p-6 border border-violet-200">
+                <h2 class="text-2xl font-bold text-violet-800 mb-4">太平山：雲霧仙境與高山步道</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    **07:00 台北車站出發。**
+                    沉浸在高山森林的芬多精與自然美景中。走訪 CNN 評選的「全球最美小路」**見晴懷古步道**，體驗獨特的**太平山蹦蹦車**，並在**鳩之澤溫泉**中享受溫泉煮食與泡湯的樂趣。**預計18:00返回台北車站。**
+                </p>
+                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
+                    <span class="bg-gray-200 rounded-full px-3 py-1">熱愛健行者</span>
+                    <span class="bg-gray-200 rounded-full px-3 py-1">享受森林浴</span>
+                </div>
+            </div>
+
+            <!-- 清水地熱行程 -->
+            <div id="qingshui" class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl shadow-md p-6 border border-red-200">
+                <h2 class="text-2xl font-bold text-red-800 mb-4">清水地熱：溫泉煮食與親子同樂</h2>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    **07:00 台北車站出發。**
+                    抵達**清水地熱公園**後，體驗用溫泉煮食的樂趣。下午可至附近的**三星鄉**，體驗親手拔蔥、做蔥油餅 DIY，感受農村生活。最後在回程前到**羅東夜市**品嚐人氣小吃。**預計18:00返回台北車站。**
+                </p>
+                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
+                    <span class="bg-gray-200 rounded-full px-3 py-1">美食主義者</span>
+                    <span class="bg-gray-200 rounded-full px-3 py-1">親子同樂</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
