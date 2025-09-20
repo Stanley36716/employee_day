@@ -3,142 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>台灣一日遊行程票選</title>
+    <title>員工旅遊行程 - 宜蘭美食與地熱探險</title>
+    <!-- 使用 Tailwind CSS CDN 確保樣式美觀且響應式 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body {
-            font-family: 'Noto Sans TC', sans-serif;
-            background-color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom, #dbeafe, #93c5fd, #60a5fa, #3b82f6);
             color: #1f2937;
+        }
+        .container {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+        }
+        .trip-card {
+            border-top-width: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .trip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 6px 15px -3px rgba(0, 0, 0, 0.08);
         }
     </style>
 </head>
-<body class="bg-gray-100 p-4 sm:p-8">
+<body class="text-gray-800">
 
-    <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-6 sm:p-10 mb-8">
-        <h1 class="text-3xl sm:text-4xl font-bold text-center text-teal-600 mb-2">台灣一日遊行程票選</h1>
-        <p class="text-center text-gray-500 mb-8">為下一次的團體旅行，從以下精彩行程中選擇您最喜歡的一個。</p>
+    <div class="container mx-auto px-4 py-8 md:py-16 rounded-3xl card-shadow">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2">宜蘭一日遊：熱情地熱與頂級饗宴</h1>
+            <p class="text-xl md:text-2xl font-bold text-gray-700 mb-4">日期：10月17日 (星期五)</p>
+            <p class="text-lg text-gray-600">一場充滿美味與驚喜的旅程，讓我們一起探索宜蘭的獨特魅力！</p>
+        </header>
 
-        <!-- 選單區塊 -->
-        <nav class="mb-8 p-4 bg-teal-50 rounded-xl shadow-inner">
-            <h3 class="text-lg font-semibold text-teal-800 mb-2">快速導覽</h3>
-            <ul class="flex flex-wrap justify-center sm:justify-between gap-3 text-sm font-medium">
-                <li><a href="#taipei" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">北台灣</a></li>
-                <li><a href="#miaoli" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">苗栗</a></li>
-                <li><a href="#lalashan" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">拉拉山</a></li>
-                <li><a href="#guishan" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">龜山島</a></li>
-                <li><a href="#taipingshan" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">太平山</a></li>
-                <li><a href="#qingshui" class="text-teal-600 hover:text-teal-800 transition-colors duration-200">清水地熱</a></li>
-            </ul>
-        </nav>
-
+        <!-- 行程卡片容器 -->
         <div class="space-y-8">
-            <!-- 北台灣行程 -->
-            <div id="taipei" class="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-2xl shadow-md p-6 border border-cyan-200">
-                <h2 class="text-2xl font-bold text-cyan-800 mb-4">北台灣：經典地標巡禮</h2>
-                <p class="text-gray-700 leading-relaxed mb-2">
-                    行程將從台北車站展開，上午7點出發。預計18:00返回台北車站。
-                </p>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
-                    <li>野柳：欣賞鬼斧神工的女王頭地景。</li>
-                    <li>九份：漫步懷舊山城老街，品嚐芋圓、草仔粿等美食。</li>
-                    <li>十分：在鐵道上施放天燈，將願望寫上天空。</li>
-                </ul>
-                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-                    <span class="bg-gray-200 rounded-full px-3 py-1">適合包車</span>
-                    <span class="bg-gray-200 rounded-full px-3 py-1">首次訪台</span>
-                    <span class="bg-gray-200 rounded-full px-3 py-1">多元體驗</span>
-                </div>
-            </div>
 
-            <!-- 苗栗行程 -->
-            <div id="miaoli" class="bg-gradient-to-br from-lime-50 to-lime-100 rounded-2xl shadow-md p-6 border border-lime-200">
-                <h2 class="text-2xl font-bold text-lime-800 mb-4">苗栗：悠閒客家美食之旅</h2>
-                <p class="text-gray-700 leading-relaxed mb-2">
-                    行程將從台北車站展開，上午7點出發。預計18:00返回台北車站。
-                </p>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
-                    <li>三義：探訪舊山線鐵道勝興車站。</li>
-                    <li>美食：品嚐道地客家菜、漫步悠靜鄉村小路。</li>
-                    <li>放鬆：享受慢活步調，讓身心靈得到徹底放鬆。</li>
+            <!-- Day 1 Card -->
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl transition-shadow duration-300 trip-card border-t-8 border-yellow-400 hover:border-yellow-500">
+                
+                <ul class="space-y-6">
+                    <!-- 行程項目 -->
+                    <li class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-xl md:text-2xl text-gray-900">09:00 | 公司集合，出發</p>
+                            <p class="mt-1 text-gray-600">懷抱著興奮的心情，在公司集合並搭上專屬遊覽車，準備踏上這趟充滿驚喜的宜蘭之旅。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="h-6 w-6 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-xl md:text-2xl text-gray-900">11:00 | 清水地熱，溫泉煮食樂趣</p>
+                            <p class="mt-1 text-gray-600">抵達清水地熱公園，一同體驗用溫泉煮食的獨特樂趣！在這裡，我們可以將雞蛋和玉米放入熱騰騰的溫泉池中，等待美食的誕生。煮好的食物帶有淡淡的硫磺香，美味又有趣。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="h-6 w-6 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-xl md:text-2xl text-gray-900">13:00 | 大洲魚寮，無菜單創意料理</p>
+                            <p class="mt-1 text-gray-600">午餐時間，我們將前往宜蘭赫赫有名的「大洲魚寮」。這間以日式建築風格打造的無菜單料理餐廳，融合了優雅的日式禪意與在地風情。主廚每天嚴選最新鮮的當季漁獲和在地小農食材，精心設計每一道菜色。在這裡，每一口都是驚喜，從前菜到甜點，都充滿了獨特的巧思與細膩的擺盤，讓您在享受美食的同時，也沉浸在藝術般的用餐體驗中。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="h-6 w-6 text-fuchsia-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-xl md:text-2xl text-gray-900">15:00 | 奕順軒羅東店，伴手禮大採購</p>
+                            <p class="mt-1 text-gray-600">來到宜蘭知名的奕順軒羅東店，您可以盡情選購各種美味的伴手禮。這趟旅程，公司也特別準備了精選伴手禮與您分享這份喜悅。奕順軒以獨特的奶凍捲與各式糕點聞名，是到宜蘭不可錯過的伴手禮選擇。</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <svg class="h-6 w-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-xl md:text-2xl text-gray-900">16:30 | 快樂賦歸，期待下次再見</p>
+                            <p class="mt-1 text-gray-600">帶著滿滿的戰利品與美好的回憶，搭上遊覽車返回公司。這趟旅程雖短，但我們一同創造的回憶將會長存！</p>
+                        </div>
+                    </li>
                 </ul>
-                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-                    <span class="bg-gray-200 rounded-full px-3 py-1">美食主義者</span>
-                    <span class="bg-gray-200 rounded-full px-3 py-1">深度慢活</span>
-                </div>
-            </div>
 
-            <!-- 拉拉山行程 -->
-            <div id="lalashan" class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl shadow-md p-6 border border-amber-200">
-                <h2 class="text-2xl font-bold text-amber-800 mb-4">拉拉山：原始森林與高山果物之旅</h2>
-                <p class="text-gray-700 leading-relaxed mb-2">
-                    行程將從台北車站展開，上午7點出發。預計18:00返回台北車站。
-                </p>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
-                    <li>巨木林：沉浸在原始森林中，欣賞千年神木群。</li>
-                    <li>健行：在山林步道中健行，吸收滿滿芬多精。</li>
-                    <li>高山水果：回程路上品嚐當季盛產的高山水果。</li>
-                </ul>
-                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-                    <span class="bg-gray-200 rounded-full px-3 py-1">熱愛健行者</span>
-                    <span class="bg-gray-200 rounded-full px-3 py-1">親近自然</span>
-                </div>
-            </div>
-
-            <!-- 龜山島行程 -->
-            <div id="guishan" class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl shadow-md p-6 border border-blue-200">
-                <h2 class="text-2xl font-bold text-blue-800 mb-4">龜山島：登島探秘與海上巡禮</h2>
-                <p class="text-gray-700 leading-relaxed mb-2">
-                    行程將從台北車站展開，上午7點出發。預計18:00返回台北車站。
-                </p>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
-                    <li>海上巡禮：從烏石港出海，繞行龜山島欣賞「龜山八景」。</li>
-                    <li>賞鯨豚：若幸運的話還能近距離看到成群的鯨豚。</li>
-                    <li>頭城老街：回程到頭城老街感受宜蘭文化與在地美食。</li>
-                </ul>
-                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-                    <span class="bg-gray-200 rounded-full px-3 py-1">海上生態愛好者</span>
-                    <span class="bg-gray-200 rounded-full px-3 py-1">特殊地景愛好者</span>
-                </div>
-            </div>
-
-            <!-- 太平山行程 -->
-            <div id="taipingshan" class="bg-gradient-to-br from-violet-50 to-violet-100 rounded-2xl shadow-md p-6 border border-violet-200">
-                <h2 class="text-2xl font-bold text-violet-800 mb-4">太平山：雲霧仙境與高山步道</h2>
-                <p class="text-gray-700 leading-relaxed mb-2">
-                    行程將從台北車站展開，上午7點出發。預計18:00返回台北車站。
-                </p>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
-                    <li>見晴懷古步道：走訪 CNN 評選的「全球最美小路」。</li>
-                    <li>太平山蹦蹦車：體驗獨特的懷舊森林鐵道。</li>
-                    <li>鳩之澤溫泉：享受溫泉煮食與泡湯的樂趣。</li>
-                </ul>
-                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-                    <span class="bg-gray-200 rounded-full px-3 py-1">熱愛健行者</span>
-                    <span class="bg-gray-200 rounded-full px-3 py-1">享受森林浴</span>
-                </div>
-            </div>
-
-            <!-- 清水地熱行程 -->
-            <div id="qingshui" class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl shadow-md p-6 border border-red-200">
-                <h2 class="text-2xl font-bold text-red-800 mb-4">清水地熱：溫泉煮食與同仁同樂</h2>
-                <p class="text-gray-700 leading-relaxed mb-2">
-                    行程將從台北車站展開，上午7點出發。預計18:00返回台北車站。
-                </p>
-                <ul class="list-disc list-inside text-gray-700 space-y-1 mb-4">
-                    <li>清水地熱：體驗用溫泉煮食的樂趣。</li>
-                    <li>三星蔥：到三星鄉體驗拔蔥、做蔥油餅 DIY。</li>
-                    <li>周邊活動：可前往國立傳統藝術中心感受文化氛圍。</li>
-                </ul>
-                <div class="flex flex-wrap gap-2 text-sm text-gray-500">
-                    <span class="bg-gray-200 rounded-full px-3 py-1">美食主義者</span>
-                    <span class="bg-gray-200 rounded-full px-3 py-1">團體活動</span>
+                <!-- 備註區塊 -->
+                <div class="mt-8 pt-4 border-t border-gray-200">
+                    <h3 class="font-semibold text-base text-gray-800 mb-2">備註：</h3>
+                    <p class="text-sm text-gray-600">所有參與旅遊以及事先請假的同仁，都會收到一份公司準備的伴手禮，讓所有同仁都能感受到出版處的溫暖！</p>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
